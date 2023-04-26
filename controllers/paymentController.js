@@ -40,7 +40,7 @@ export const paymentVerification = async (req, res) => {
     });
 
     res.redirect(
-      `https://razorpaymern.vercel.app/paymentsuccess?reference=${razorpay_payment_id}`
+      `https://razorpaymernjeetjeet.vercel.app/paymentsuccess?reference=${razorpay_payment_id}`
     );
   } else {
     res.status(400).json({
