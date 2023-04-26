@@ -40,7 +40,7 @@ export const paymentVerification = async (req, res) => {
     });
 
     res.redirect(
-      `${BASE_URL}/paymentsuccess?reference=${razorpay_payment_id}`
+      `https://server-virid-one.vercel.app/paymentsuccess?reference=${razorpay_payment_id}`
     );
   } else {
     res.status(400).json({
