@@ -2,7 +2,7 @@ import { instance } from "../server.js";
 import crypto from "crypto";
 import { Payment } from "../models/paymentModel.js";
 
-const BASE_URL =process.env.BASE_URL
+
 
 export const checkout = async (req, res) => {
   const options = {
