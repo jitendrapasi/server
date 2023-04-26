@@ -2,6 +2,8 @@ import { instance } from "../server.js";
 import crypto from "crypto";
 import { Payment } from "../models/paymentModel.js";
 
+const BASE_URL =process.env.BASE_URL
+
 export const checkout = async (req, res) => {
   const options = {
     amount: Number(req.body.amount * 100),
@@ -38,7 +40,7 @@ export const paymentVerification = async (req, res) => {
     });
 
     res.redirect(
-      `http://localhost:3000/paymentsuccess?reference=${razorpay_payment_id}`
+      `${BASE_URL}/paymentsuccess?reference=${razorpay_payment_id}`
     );
   } else {
     res.status(400).json({
